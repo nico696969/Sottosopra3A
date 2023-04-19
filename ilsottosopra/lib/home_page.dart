@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:ilsottosopra/news_detail.dart';
 import 'package:ilsottosopra/widgets/news.dart';
+import 'package:ilsottosopra/widgets/video_player.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -28,8 +29,11 @@ class HomePage extends StatelessWidget {
        
           ),
           ),
+          
        ),
+       VideoApp(),
 
+       
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
