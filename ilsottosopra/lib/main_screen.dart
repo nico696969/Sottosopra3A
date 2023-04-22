@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:ilsottosopra/home_page.dart';
-import 'package:ilsottosopra/setting_page.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:ilsottosopra/search_bar.dart';
 
 import 'account_page.dart';
 
@@ -19,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
 int selectedIndex=0;
 List<Widget> screens=[
   HomePage(),
-  SettingPage(),
+  SearchInput(),
   AccountPage(),
 ];
 
@@ -47,8 +47,8 @@ void changeIndex(int index){
         currentIndex: selectedIndex,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "home" ),
-          BottomNavigationBarItem(icon: Icon(Icons.settings),label: "setting"),
-          BottomNavigationBarItem( icon: Icon(Icons.person),label: "Account" )
+          BottomNavigationBarItem(icon: Icon(Icons.search),label: "search"),
+          BottomNavigationBarItem( icon: Icon(Icons.person),label: "account" )
         ],
       ),
       body: screens.elementAt(selectedIndex),
